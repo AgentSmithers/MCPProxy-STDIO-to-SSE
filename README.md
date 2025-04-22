@@ -31,51 +31,51 @@ GET /sse (SSE stream with an event: endpoint frame)
 POST /message?sessionId={id} (accepts JSON-RPC payloads)
 
 Building
-'''
+```
 git clone https://github.com/yourorg/MCPProxy-STDIO-to-SSE.git
 cd MCPProxy-STDIO-to-SSE
 dotnet build -c Release
-'''
+```
 
 Usage
-'''
+```
 # Basic (no extra headers):
 dotnet run --project src/Program.cs http://localhost:3001
 
 # With additional HTTP headers:
 dotnet run --project src/Program.cs http://localhost:3001 ApiKey 12345
-'''
+```
 
 Once launched, the app will:
 Open GET http://localhost:3001/sse with Accept: text/event-stream.
 Wait for an event: endpoint frame—e.g.:
-'''
+```
 event: endpoint
 data: /message?sessionId=Wp6wxiY6PyBRoTtCNyLucw
-'''
+```
 
 Read lines from your STDIN and POST each one as JSON to:
-'''
+```
 POST http://localhost:3001/message?sessionId=Wp6wxiY6PyBRoTtCNyLucw
 Content-Type: application/json
 
 {"jsonrpc":"2.0","id":1, ...}
-'''
+```
 
 Print every other SSE data: payload to STDOUT, for example:
-'''
+```
 {"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2024-11-05", ...}}
-'''
+```
 
 Write a detailed log of “Sent” and “Received” messages (with timestamps and formatted JSON) into:
-'''
+```
 %TEMP%\MCPProxy-STDIO.log
-'''
+```
 
 Use this bridge to connect any STDIO-driven LSP/JSON-RPC client (including Claude Desktop) to a web-based SSE/MCP backend seamlessly.
 Sample Claude JSON configuration
 
-'''
+```
 {
   "mcpServers": {
     "Local CNET Debug": {
@@ -87,6 +87,6 @@ Sample Claude JSON configuration
     }
   }
 }
-'''
+```
 
 ![image](https://github.com/user-attachments/assets/ba5a2920-c369-4083-bf6b-7a32f9228893)
