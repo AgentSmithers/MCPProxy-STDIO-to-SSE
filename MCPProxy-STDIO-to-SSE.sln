@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCPProxy-STDIO-to-SSE", "MCPProxy-STDIO-to-SSE\MCPProxy-STDIO-to-SSE.csproj", "{F241733C-B689-4C9E-83F8-D0537F405963}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F241733C-B689-4C9E-83F8-D0537F405963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F241733C-B689-4C9E-83F8-D0537F405963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F241733C-B689-4C9E-83F8-D0537F405963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F241733C-B689-4C9E-83F8-D0537F405963}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB6DF7BE-1764-4DC0-A6F6-892E5DD56E98}
+	EndGlobalSection
+EndGlobal
