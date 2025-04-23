@@ -1,5 +1,5 @@
 # MCPProxy-STDIO-to-SSE
-
+## Makes a MCP SSE server compatiable with WindSurf and Claude Desktop
 MCPProxy-STDIO-to-SSE
 A lightweight .NET console bridge that lets any STDIO-based client speak to an SSE-backed MCP server.
 It:
