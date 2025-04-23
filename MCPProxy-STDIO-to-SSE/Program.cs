@@ -21,7 +21,7 @@ class Program
             return 1;
         }
 
-        var logPath = Path.Combine(Path.GetTempPath(), "MCPProxy-STDIO.log");
+        var logPath = Path.Combine(Path.GetTempPath(), "MCPProxy-STDIO" + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + ".log");
         _logWriter = new StreamWriter(new FileStream(logPath, FileMode.Append, FileAccess.Write, FileShare.Read))
         { AutoFlush = true };
 
