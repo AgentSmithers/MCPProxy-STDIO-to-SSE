@@ -47,6 +47,7 @@ class Program
 
         // 2) Start the SSE connection to {baseUrl}/sse
         var sseUrl = $"{baseUrl}/sse";
+        LogMessage("Connector", $"Connecting to: {sseUrl}");
         var sseReq = new HttpRequestMessage(HttpMethod.Get, sseUrl);
         sseReq.Headers.TryAddWithoutValidation("Accept", "text/event-stream");
 
@@ -134,6 +135,7 @@ class Program
         var inputTask = Task.Run(async () =>
         {
             var messageUrl = await messageUrlTcs.Task;
+            LogMessage("Connector", $"Connecting to: {messageUrl}");
             string? jsonLine;
             while ((jsonLine = await stdinReader.ReadLineAsync()) != null)
             {
