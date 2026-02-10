@@ -120,7 +120,7 @@ class Program
                     buffer.Clear();
                     if (payload.Length > 0)
                     {
-                        Console.WriteLine(payload);
+                        Console.Write(payload + "\n");
                         LogMessage("Server->Client", $"[data: {payload}]");
                     }
                     else
